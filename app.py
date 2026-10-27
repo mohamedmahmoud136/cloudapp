@@ -292,7 +292,10 @@ with tab_stats:
                 }
             )
         df = pd.DataFrame(rows)
-        st.dataframe(df, use_container_width=True, hide_index=True)
+        try:
+            st.dataframe(df, width="stretch", hide_index=True)
+        except (TypeError, ValueError):
+            st.dataframe(df, use_container_width=True, hide_index=True)
 
         # CSV export
         csv_data = df.to_csv(index=False).encode("utf-8")
