@@ -1,0 +1,18 @@
+# Python / virtual-env
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+*.egg-info/
+*.egg
+
+# Streamlit secrets (never commit)
+.streamlit/secrets.toml
+
+# OS / IDE artefacts
+.DS_Store
+.idea/
+*.iml
+.vscode/
